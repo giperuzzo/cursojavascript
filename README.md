@@ -1,2 +1,2 @@
 # cursojavascript
-Curso de JavaScript  no programa sharp coders
+Curso de JavaScript  no programa sharp coders Felipe Rocha
