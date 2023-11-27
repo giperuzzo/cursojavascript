@@ -1,0 +1,34 @@
+// criando eventos veremos o poder que o javascript tem qdo usado nss nossas aplicações  criamos uma variavel, localizamos o id e selecionamos
+// para saber mais sobre events consultar o mdn/events
+const submitButton = document.querySelector('#submit-button');
+const myForm = document.querySelector("#my-form");
+const nameInput = document.querySelector('#name');
+const emailInput =document.querySelector('#email');
+const items = document.querySelector(".items");
+const body = document.querySelector("body");
+submitButton.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const nameValue = nameInput.value;
+    const emailValue = emailInput.value;
+
+    if(nameValue === "" || emailValue === "") {
+        return alert("Please fill out all the fields!")
+    }
+// mudando o  a cor do formulario após ser preenchido
+    myForm.style.background = "red" ;
+
+    // mudando a descrição do titulo "item 1 e item dois"
+
+    items.firstElementChild.textContent = nameValue;
+    items.children[1].textContent = emailValue;
+
+    // mudando a cor do body após o formulãio ser preenchido
+
+    body.style.background = "white";
+
+});
+
+    // nameInput.addEventListener("change", function (e){
+    //     console.log(e.target.value);
+    // });
